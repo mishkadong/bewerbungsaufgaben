@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  justify-content: flex-start;
+  padding: 2em;
+}
+
+.karte {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  margin-right: 2em;
+  border: 1px solid black;
+  &__item{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5em;
+  }
+  & b {
+    margin-left: 0.5em;
+  }
+}
+
+.colour-counter-text {
+  padding: 0 2em;
+}
