@@ -1,4 +1,4 @@
-const alle_karten_datei = [
+const alle_karten_daten = [
   {
     farb_nr: 1,
     angriff: 1000,
@@ -22,4 +22,4 @@ const alle_karten_datei = [
   },
 ];
 
-export default alle_karten_datei;
+export default alle_karten_daten;

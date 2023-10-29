@@ -1,6 +1,7 @@
-import alle_karten_datei from "../data/alle_karten_datei";
+import alle_karten_daten from "../data/alle_karten_daten";
 import Karte from "./Karte";
 
+//Aufgabe 1
 function farbÜbersetzung(farb_nr) {
   const farben = {
     1: "Grün",
@@ -12,6 +13,7 @@ function farbÜbersetzung(farb_nr) {
   return farben[farb_nr] || "unbekannte Farbe";
 }
 
+//Aufgabe 2
 function wieVielKarten(arr) {
   let farbZähler = {
     grünKarten: 0,
@@ -44,17 +46,18 @@ function wieVielKarten(arr) {
   return `Grüne Karten: ${farbZähler.grünKarten}, rote Karten: ${farbZähler.rotKarten}, weiße Karten: ${farbZähler.weißKarten}, schwarze Karten: ${farbZähler.schwarzKarten}, blaue Karten: ${farbZähler.blauKarten}`;
 }
 
+//Aufgabe 3
 const AlleKarten = () => {
   return (
     <>
       <div className="container">
-        {alle_karten_datei.map((item, index) => {
-          item.farbe = farbÜbersetzung(item.farb_nr);
-
-          return <Karte key={index} data={item} />;
+        {alle_karten_daten.map((element, index) => {
+          element.farbe = farbÜbersetzung(element.farb_nr);
+          console.log(index)
+          return <Karte key={index} data={element} />;
         })}
       </div>
-      <p className="colour-counter-text">{`${wieVielKarten(alle_karten_datei)}`}</p>
+      <p className="farbzähler-text">{`${wieVielKarten(alle_karten_daten)}`}</p>
     </>
   );
 };

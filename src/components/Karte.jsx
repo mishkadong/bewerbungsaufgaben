@@ -2,14 +2,14 @@
 const Karte = ({data}) => {
   const { farb_nr, angriff, verteidigung, name, herkunftsland, farbe } = data;
   return (
-    <div className="karte">
-      <span className="karte__item">name: <b>{name}</b></span>
-      <span className="karte__item">herkunftsland: <b>{herkunftsland}</b></span>
-      <span className="karte__item">angriff: <b>{angriff}</b></span>
-      <span className="karte__item">verteidigung: <b>{verteidigung}</b></span>
-      <span className="karte__item">farbe: <b>{farbe}</b></span>
-      <span className="karte__item">farb_nr: <b>{farb_nr}</b></span>
-    </div>
+    <ul className="karte">
+      <li className="karte__element"><span className="karte__element-var">name: </span><span className="karte__element-wert">{name}</span></li>
+      <li className="karte__element"><span className="karte__element-var">herkunftsland: </span><span className="karte__element-wert">{herkunftsland}</span></li>
+      <li className="karte__element"><span className="karte__element-var">angriff: </span><span className="karte__element-wert">{angriff}</span></li>
+      <li className="karte__element"><span className="karte__element-var">verteidigung: </span><span className="karte__element-wert">{verteidigung}</span></li>
+      <li className="karte__element"><span className="karte__element-var">farbe: </span><span className="karte__element-wert">{farbe}</span></li>
+      <li className="karte__element"><span className="karte__element-var">farb_nr: </span><span className="karte__element-wert">{farb_nr}</span></li>
+    </ul>
   )
 }
 
